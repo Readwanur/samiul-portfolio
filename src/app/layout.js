@@ -20,9 +20,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Samiul Islam — Software Engineer & AI Product Builder",
+  title: "Md Samiul Mollik — Lead Researcher with AI integrated Systems",
   description:
-    "Portfolio of Samiul Islam — Software Engineer, AI Product Builder, and Winner of the 7th Edition Harvard T.H. Chan School of Public Health HSIL Hackathon (Team Maverik).",
+    "Portfolio of Md Samiul Mollik — Lead Researcher with AI integrated Systems, and Winner of the 7th Edition Harvard T.H. Chan School of Public Health HSIL Hackathon (Team Maverik).",
 };
 
 export default function RootLayout({ children }) {

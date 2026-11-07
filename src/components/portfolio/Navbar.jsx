@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowUpRight } from "lucide-react";
+import { PERSONAL_DETAILS } from "@/data/portfolio-data";
 
 const NAV_ITEMS = [
   { label: "About", href: "#about" },
@@ -37,10 +38,10 @@ export default function Navbar() {
           href="#about"
           className="text-sm font-semibold tracking-tight text-neutral-100 hover:text-white transition-colors flex items-center gap-2.5"
         >
-          <span>Samiul Islam</span>
+          <span>{PERSONAL_DETAILS.name}</span>
           <span className="text-neutral-600">/</span>
           <span className="font-mono text-xs font-normal text-neutral-400">
-            Dhaka
+            {PERSONAL_DETAILS.location.split(",")[0]}
           </span>
         </a>
 

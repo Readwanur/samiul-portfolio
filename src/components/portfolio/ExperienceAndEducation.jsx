@@ -124,16 +124,20 @@ export default function ExperienceAndEducation() {
                     </p>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed pt-1">
-                    {edu.details}
-                  </p>
+                  {edu.details && (
+                    <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed pt-1">
+                      {edu.details}
+                    </p>
+                  )}
                 </div>
 
-                <div className="pt-4 border-t border-neutral-800/80">
-                  <span className="font-mono text-xs text-neutral-200">
-                    {edu.result}
-                  </span>
-                </div>
+                {edu.result && (
+                  <div className="pt-4 border-t border-neutral-800/80">
+                    <span className="font-mono text-xs text-neutral-200">
+                      {edu.result}
+                    </span>
+                  </div>
+                )}
               </motion.div>
             ))}
           </div>

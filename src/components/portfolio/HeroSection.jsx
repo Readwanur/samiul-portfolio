@@ -29,13 +29,17 @@ export default function HeroSection() {
 
             {/* Minimal Editorial Heading */}
             <div className="space-y-4">
-              <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight text-neutral-100 leading-[1.12]">
-                Samiul Islam is a software engineer building{" "}
-                <span className="font-serif-editorial italic font-normal text-neutral-300">
-                  applied AI
-                </span>{" "}
-                and human-centric web systems.
-              </h1>
+              <div className="space-y-2">
+                <p className="font-mono text-xs uppercase tracking-widest text-neutral-400">
+                  {PERSONAL_DETAILS.role}
+                </p>
+                <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight text-neutral-100 leading-[1.12]">
+                  {PERSONAL_DETAILS.name} —{" "}
+                  <span className="font-serif-editorial italic font-normal text-neutral-300">
+                    {PERSONAL_DETAILS.role}
+                  </span>
+                </h1>
+              </div>
 
               <p className="text-sm sm:text-base text-neutral-400 leading-relaxed max-w-xl">
                 {PERSONAL_DETAILS.bio}

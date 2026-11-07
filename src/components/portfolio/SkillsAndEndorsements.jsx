@@ -17,9 +17,9 @@ export default function SkillsAndEndorsements() {
     >
       <div className="max-w-5xl mx-auto px-5 sm:px-8 space-y-24">
         {/* =================================================================
-            04 — CAPABILITIES (CLEAN TYPOGRAPHIC LISTS, NO FAKE BARS)
+            04 — CAPABILITIES (CENTERED DIV)
            ================================================================= */}
-        <div>
+        <div className="flex flex-col items-center text-center">
           <div className="space-y-2 mb-12">
             <span className="font-mono text-xs uppercase tracking-widest text-neutral-500 block">
               04 — Capabilities
@@ -29,7 +29,7 @@ export default function SkillsAndEndorsements() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-neutral-800/80 pt-8">
+          <div className="w-full max-w-xl mx-auto border-t border-neutral-800/80 pt-8 flex flex-col items-center justify-center gap-8">
             {CAPABILITIES_DATA.map((col, idx) => (
               <motion.div
                 key={col.group}
@@ -37,7 +37,7 @@ export default function SkillsAndEndorsements() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.06 }}
-                className="space-y-4"
+                className="w-full space-y-4 text-center"
               >
                 <h3 className="font-mono text-xs uppercase tracking-wider text-neutral-400">
                   {col.group}

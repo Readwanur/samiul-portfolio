@@ -13,7 +13,7 @@ export const PERSONAL_DETAILS = {
       id: "studio",
       label: "Portrait",
       src: "/samiul-portrait.jpg",
-      caption: "Samiul Islam — Dhaka, Bangladesh",
+      caption: "Md Samiul Mollik — Dhaka, Bangladesh",
     },
     {
       id: "hackathon",
@@ -25,7 +25,7 @@ export const PERSONAL_DETAILS = {
   ],
   details: [
     { label: "Based in", value: "Dhaka, Bangladesh (UTC+6)" },
-    { label: "Focus", value: "Applied AI, Computer Vision, Full-Stack Web" },
+    { label: "Focus", value: "Applied AI integration with Health Systems" },
     { label: "Recognition", value: "Winner, Harvard HSIL Hackathon (7th Ed.)" },
     { label: "Languages", value: "English, Bengali (বাংলা)" },
   ],
