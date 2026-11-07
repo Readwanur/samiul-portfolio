@@ -21,11 +21,28 @@ export default function HeroSection() {
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="lg:col-span-7 space-y-8"
           >
-            {/* Status Line */}
-            <div className="inline-flex items-center gap-2.5 text-xs font-mono text-neutral-400">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-              <span>{PERSONAL_DETAILS.availability}</span>
-            </div>
+            {/* Bespoke Editorial Availability Badge */}
+            <a
+              href="#contact"
+              className="group inline-flex items-center gap-3 rounded-full bg-[#121212] hover:bg-[#171717] border border-neutral-800/90 hover:border-neutral-700 pl-2 pr-4 py-1.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition-all duration-300"
+            >
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-neutral-100 text-neutral-950 px-2.5 py-0.5 text-[10px] font-mono font-semibold uppercase tracking-widest">
+                <svg
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  className="w-2.5 h-2.5 text-neutral-950 animate-[spin_8s_linear_infinite]"
+                >
+                  <path
+                    d="M6 0L7.3 4.7L12 6L7.3 7.3L6 12L4.7 7.3L0 6L4.7 4.7L6 0Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                Active
+              </span>
+              <span className="text-xs text-neutral-300 group-hover:text-neutral-100 transition-colors">
+                {PERSONAL_DETAILS.availability}
+              </span>
+            </a>
 
             {/* Minimal Editorial Heading */}
             <div className="space-y-4">
@@ -34,7 +51,7 @@ export default function HeroSection() {
                   {PERSONAL_DETAILS.role}
                 </p>
                 <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight text-neutral-100 leading-[1.12]">
-                  {PERSONAL_DETAILS.name} —{" "}
+                  {PERSONAL_DETAILS.name} -{" "}
                   <span className="font-serif-editorial italic font-normal text-neutral-300">
                     {PERSONAL_DETAILS.role}
                   </span>
@@ -110,29 +127,35 @@ export default function HeroSection() {
               </div>
 
               {/* Minimal Caption & Photo Toggle */}
-              <div className="flex items-center justify-between gap-4 pt-1">
-                <p className="text-xs text-neutral-500 truncate">
+              <div className="flex flex-col gap-2.5 pt-1">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="font-mono text-[11px] uppercase tracking-wider text-neutral-500">
+                    {activePhoto.label}
+                  </span>
+
+                  <div className="inline-flex items-center rounded-full border border-neutral-800 bg-neutral-900/70 p-0.5 shrink-0">
+                    {PERSONAL_DETAILS.portraits.map((p, idx) => {
+                      const active = idx === photoIndex;
+                      return (
+                        <button
+                          key={p.id}
+                          onClick={() => setPhotoIndex(idx)}
+                          className={`px-2.5 py-1 rounded-full text-[11px] font-mono transition-colors cursor-pointer ${
+                            active
+                              ? "bg-neutral-200 text-neutral-950 font-medium"
+                              : "text-neutral-400 hover:text-neutral-200"
+                          }`}
+                        >
+                          {p.label}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <p className="text-xs text-neutral-400 leading-relaxed">
                   {activePhoto.caption}
                 </p>
-
-                <div className="inline-flex items-center rounded-full border border-neutral-800 bg-neutral-900/70 p-0.5 shrink-0">
-                  {PERSONAL_DETAILS.portraits.map((p, idx) => {
-                    const active = idx === photoIndex;
-                    return (
-                      <button
-                        key={p.id}
-                        onClick={() => setPhotoIndex(idx)}
-                        className={`px-2.5 py-1 rounded-full text-[11px] font-mono transition-colors cursor-pointer ${
-                          active
-                            ? "bg-neutral-200 text-neutral-950 font-medium"
-                            : "text-neutral-400 hover:text-neutral-200"
-                        }`}
-                      >
-                        {p.label}
-                      </button>
-                    );
-                  })}
-                </div>
               </div>
             </div>
           </motion.div>

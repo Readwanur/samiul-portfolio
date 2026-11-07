@@ -7,20 +7,20 @@ export const PERSONAL_DETAILS = {
   availability: "Open to select engineering roles & research collaborations",
   headline:
     "Building applied AI systems, computer vision tools, and thoughtful web interfaces.",
-  bio: "I am a software engineer and product builder focused on the intersection of machine learning, human-computer interaction, and healthcare technology. Recently, my team (Team Maverik) won the 7th Edition Harvard T.H. Chan School of Public Health HSIL Hackathon for building Pixie-Dixie, an adaptive dyslexia screening and learning platform.",
+  bio: "I am a lead researcher and product builder focused on the intersection of machine learning, human-computer interaction, and healthcare technology. Recently, my team (Team Maverik) won the 7th Edition Harvard T.H. Chan School of Public Health HSIL Hackathon for building Pixie-Dixie, an adaptive dyslexia screening and learning platform.",
   portraits: [
     {
       id: "studio",
       label: "Portrait",
       src: "/samiul-portrait.jpg",
-      caption: "Md Samiul Mollik — Dhaka, Bangladesh",
+      caption: "Md Samiul Mollik | Dhaka, Bangladesh",
     },
     {
       id: "hackathon",
       label: "Harvard HSIL Hackathon",
       src: "/samiul.jpeg",
       caption:
-        "1st Place Winner (Team Maverik) — Harvard T.H. Chan School of Public Health HSIL Hackathon, 7th Edition",
+        "1st Place Winner (Team Maverik) | Harvard T.H. Chan School of Public Health HSIL Hackathon, 7th Edition",
     },
   ],
   details: [
@@ -266,7 +266,7 @@ export const EXPERIENCE_DATA = [
     location: "Dhaka, Bangladesh",
     badge: "Winner — Harvard HSIL Hackathon (7th Ed.)",
     summary:
-      "Leading product engineering, computer vision, and clinical validation for an AI-powered dyslexia screening and adaptive learning platform for children aged 5–12.",
+      "Leading research, computer vision, and clinical validation for an AI-powered dyslexia screening and adaptive learning platform for children aged 5–12.",
     highlights: [
       "Won 1st Place (20,000 BDT prize) at the 7th Edition Harvard T.H. Chan School of Public Health Health Systems Innovation Lab (HSIL) Hackathon hosted with UIU & IRIIC.",
       "Built the real-time webcam eye-tracking module and bilingual (English + বাংলা) handwriting reversal classifier trained on 509,000+ samples.",
@@ -279,7 +279,7 @@ export const EXPERIENCE_DATA = [
 export const EDUCATION_DATA = [
   {
     id: "edu-1",
-    period: "2025 — 2029",
+    period: "2025 — Present",
     degree: "B.Sc. in Biotechnology and Genetic Engineering",
     institution: "United International University (UIU)",
     location: "Dhaka, Bangladesh",

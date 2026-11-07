@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Md Samiul Mollik — Lead Researcher with AI integrated Systems",
+  title: "Md Samiul Mollik | Lead Researcher with AI integrated Systems",
   description:
     "Portfolio of Md Samiul Mollik — Lead Researcher with AI integrated Systems, and Winner of the 7th Edition Harvard T.H. Chan School of Public Health HSIL Hackathon (Team Maverik).",
 };
